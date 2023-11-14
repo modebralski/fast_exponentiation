@@ -1,5 +1,5 @@
 def main():
-    print(exponentiation(11, 1000))
+    print(exponentiation(3, 29))
 
 
 def exponentiation(base, power):
@@ -11,10 +11,12 @@ def exponentiation(base, power):
         squares_of_base.append(squares_of_base[-1] * squares_of_base[-1])
     print(squares_of_base)
     result = 1
-    for i, current_bit in enumerate(power_in_binary[::-1]):
-        print(f'i {i}, bit {current_bit}')
+    for square_of_base, current_bit in enumerate(power_in_binary[::-1]):
         if current_bit == '1':
-            result = result * squares_of_base[i]
+            result = result * squares_of_base[square_of_base]
+            print(f'{base}^{2 ** square_of_base} * {current_bit} = {squares_of_base[square_of_base]}, result = {result}')
+        else:
+            print(f'{base}^{2 ** square_of_base} * 0 = 1, result = {result}')
     return result
 
 
