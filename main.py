@@ -6,7 +6,7 @@ def main():
 
 def exponentiation(base, power):
     power_in_binary = bin(power)[2:]
-    print(f'{power_in_binary}')
+    print(f'{base} in binary: {power_in_binary}')
     lenght_of_power_in_binary = len(power_in_binary)
     squares_of_base = [base]
     for _ in range(lenght_of_power_in_binary - 1):
