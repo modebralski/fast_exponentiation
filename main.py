@@ -1,5 +1,7 @@
 def main():
-    print(exponentiation(3, 29))
+    base = 3
+    power = 29
+    print(f"{base}^{power} = {exponentiation(base, power)}")
 
 
 def exponentiation(base, power):
